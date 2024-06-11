@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title><%= htmlWebpackPlugin.options.title %> | Story App</title>
+
+    <!-- Custom Styles -->
+    <!--link rel="stylesheet" href="../css/styles.css" /-->
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome 5.15 -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <header class="header" id="header">
+        <div class="navbar-wrapper">
+          <nav class="navbar">
+            <img class="logo" src="/images/logo-story.png" alt="Story Logo" height="36" />
+            <button class="hamburger-btn" id="hamburger-btn"><i class="fas fa-bars"></i></button>
+            <ul class="nav-items">
+              <li class="nav-item">
+                <a href="/" rel="noopener noreferrer">Dashboard</a>
+              </li>
+              <li class="nav-item">
+                <a href="./addStoryGuest.html" rel="noopener noreferrer">Add Story</a>
+              </li>
+              <li class="nav-item">
+                <a href="https://www.linkedin.com/in/sinta-siti-nuriah-7678801a3/" rel="noopener noreferrer">About Us</a>
+              </li>
+              <li class="nav-item">
+                <a href="./loginStory.html" rel="noopener noreferrer">Login</a>
+              </li>
+              <li class="nav-item">
+                <a href="./signStory.html" rel="noopener noreferrer">Sign Up</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+ 
+    <main>
+      <div class="main-content">
+        <div class="container py-5">
+          <section class="add-story section" id="add-story">
+            <h2 class="section-title"> Add Story</h2>
+            <div class="row justify-content-center">   
+               <form id="uploadFormGuest" class="needs-validation" novalidate>
+
+                  <!-- Upload Wrapper -->
+                  <div class="upload-wrapper">
+                    <!-- <div class="mb-3">
+                      <input type="file" class="form-control" aria-label="file example" required="">
+                      <div class="invalid-feedback">Example invalid form file feedback</div>
+                    </div> -->
+                    <label for="fileInputGuest">Upload Poster Cerita</label>
+                    <input type="file" id="fileInputGuest" class="form-control" accept="image/*" required>
+                    <div id="fileValidationTextGuest" class="invalid-feedback">Please upload an image file <span>!</span></div>
+
+                    <img id="imagePreviewGuest" alt="Image Preview" class="preview mt-2" style="display: none;">
+                </div>
+
+                    <!-- Textarea Wrapper -->
+                  <div class="textarea-wrapper mt-5">
+                    <label for="description">Deskripsi Cerita</label>
+                    <input-text-area></input-text-area>
+                    <div id="textValidationTextGuest" class="invalid-feedback">Mohon isikan deskripsi terlebih dahulu <span>!</span></div>
+
+                  </div>
+
+                    <!-- Submit Wrapper -->
+                    <div class="submit-control mt-5">
+                      <button class="dark-btn" type="submit" id="submitGuest">Submit</button>
+                  </div>
+                </form>
+                <loading-element></loading-element>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+ 
+    <footer>
+      <div class="main-footer bg-dark">
+        <div class="container px-3 py-4">
+            <footer-app></footer-app>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
